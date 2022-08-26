@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.22)  26 AUG 2022 12:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.22)  26 AUG 2022 14:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Assignment.tex
-(./Assignment.tex
+**Canoniclal-PoS.tex
+(./Canoniclal-PoS.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -269,12 +269,12 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count284
 \l__pdf_internal_box=\box52
 )
-(./Assignment.aux
+(./Canoniclal-PoS.aux
 
 LaTeX Warning: Label `Truth Table' multiply defined.
 
 )
-\openout1 = `Assignment.aux'.
+\openout1 = `Canoniclal-PoS.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
@@ -333,9 +333,9 @@ LaTeX Info: Redefining \ref on input line 11.
 LaTeX Info: Redefining \pageref on input line 11.
 LaTeX Info: Redefining \nameref on input line 11.
 
-(./Assignment.out) (./Assignment.out)
+(./Canoniclal-PoS.out) (./Canoniclal-PoS.out)
 \@outlinefile=\write3
-\openout3 = `Assignment.out'.
+\openout3 = `Canoniclal-PoS.out'.
 
 
 *geometry* driver: auto-detecting
@@ -382,30 +382,35 @@ File: TT-2-document.jpg Graphic file (type jpg)
 <use TT-2-document.jpg>
 Package pdftex.def Info: TT-2-document.jpg  used on input line 34.
 (pdftex.def)             Requested size: 257.61894pt x 73.71162pt.
+
+Overfull \hbox (19.34348pt too wide) in paragraph at lines 40--43
+\OT1/cmr/m/n/12 svn check-out https://github.com/Ravisumanth/FWC-
+ []
+
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./TT-document.jpg> <./TT-2-document.jpg>] (./Assignment.aux)
+ <./TT-document.jpg> <./TT-2-document.jpg>] (./Canoniclal-PoS.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `Assignment.out' has not changed.
+Package rerunfilecheck Info: File `Canoniclal-PoS.out' has not changed.
 (rerunfilecheck)             Checksum: E82798E8A6BDE468651F7A81997BE6F2;735.
  ) 
 Here is how much of TeX's memory you used:
  9351 strings out of 478287
- 146257 string characters out of 5849289
- 447623 words of memory out of 5000000
+ 146325 string characters out of 5849289
+ 448643 words of memory out of 5000000
  27439 multiletter control sequences out of 15000+600000
  475245 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,8n,63p,324b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,8n,63p,328b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Assignment.pdf (1 page, 97139 bytes).
+Output written on Canoniclal-PoS.pdf (1 page, 97485 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream
