@@ -18,7 +18,7 @@ Z = digitalRead(8);
 A = (X||Y||!Z)&&(X||!Z||!Y)&&(!X+!Y+Z)&&(!X+!Y+!Z);
 
 if (A==0){
-digitalWrite(13,LOW);
+digitalWrite(12,LOW);
 }
 else {
 digitalWrite(13,HIGH);
