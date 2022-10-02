@@ -1,0 +1,99 @@
+\documentclass[a4paper,12pt,twocolumn]{article}
+\usepackage{graphicx}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[cmex10]{amsmath}
+\usepackage{array}
+\usepackage{gensymb}
+\usepackage{booktabs}
+\title{Circle Assignment}
+
+\author{Ravi Sumanth Muppana- FWC22003}
+\date{September 2022}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\let\vec\mathbf
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}	
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left((#1\right)}}
+\begin{document}
+\maketitle
+\section{Problem:}
+A quadrilateral $ABCD$ is drawn to circumscribe a circle. Show that $\vec{AB+CD}$ is equal to $\vec{BC+AD}$
+\maketitle
+\section{Solution:}
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{circle.png}
+	\caption{Circle}
+\end{figure}
+\subsection{Theory:}
+The sides of quadrilateral act as tangents to the circle. Also, the tangents at any point is at right angle to the radius of the circle. Let us assume two vectors $\vec{AP}$ and $\vec{AQ}$. The addition of these vectors is the line joining the vertex and the centre of the circle $\vec{O}$. Let us name it as $\vec{X}$.
+\begin{align*}
+&\vec{X} = \vec{AP+AQ}
+\end{align*}
+\subsection{Mathematical Calculation:}
+The possible tangents to the circle w.r.t vertices are $\vec{(AP,AQ,BQ,BR,CR,CS,DS,DP)}$. Let us consider the tangents $\vec{AP,AQ}$. Their addition vector is $\vec{X}$. The radius of the circle be $\vec{Y}$.
+\begin{align*}
+&\vec{X} = \vec{AP+AQ}
+&\vec{Y} = \vec{X-AP}
+\end{align*}
+In triangle APO and AQO,  
+\begin{align*}
+&\vec{X}= \vec{Y+AP}\\
+&\vec{X}= \vec{Y+AQ}\\
+&||\vec{X}||^2 = ||\vec{Y+AP}||^2\\
+&||\vec{X}||^2 = ||\vec{Y+AQ}||^2\\
+&||\vec{X}||^2 = ||\vec{Y}||^2 +2(\vec{Y^T.AP}) +||\vec{AP}||^2\\
+&||\vec{X}||^2 = ||\vec{Y}||^2 +2(\vec{Y^T.AQ}) +||\vec{AQ}||^2\\
+\end{align*}
+As $\vec{(Y,AP)}$ and $\vec{(Y,AQ)}$ are perpendicular to each other, the terms $+2(\vec{Y^T.AP})$ and $+2(\vec{Y^T.AQ})$ will be equal to zero. 
+\begin{align*}
+&||\vec{X}||^2 = ||\vec{Y}||^2 + ||\vec{AP}||^2 \\
+&||\vec{X}||^2 = ||\vec{Y}||^2 + ||\vec{AQ}||^2\\
+&||\vec{AP} = ||\vec{AQ}||
+\end{align*}
+Therefore, the lengths AP is equal to AQ.\\
+Similarly, if we take the rest of the tangents as vectors and solve in the same way, we get
+\begin{align}
+	&\vec{BQ} = \vec{BR}\\
+	&\vec{CR} = \vec{CS}\\
+	&\vec{DS} = \vec{DP}
+\end{align}
+Now, add all the above equations and we get,
+\begin{align}
+	&\vec{(AP+BR+CR+DP)} = \vec{(AQ+BQ+CS+DS)}\\
+	&\vec{(AD+BC)} = \vec{(AB+CD)}
+\end{align}
+Hence proved.
+\section{Construction:}
+The construction of rhombus can be done using only two diagonals, taken as d1 and d2.
+\begin{table}
+	\centering
+\setlength\extrarowheight{2pt}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{vertices, variables} & \textbf{formulae} & \textbf{Comments}\\
+		\hline
+		(a,c,d,r) & (8,3,4,5) & ;sides and radius\\
+		\hline
+		theta1 & 2*mp.atan(r/d) & angle ADC\\
+		\hline
+		theta2 & 2*mp.atan(r/a) & angle BAD\\
+		\hline                   
+		theta3 & 2*mp.atan(r/c) & angle BCD\\
+		\hline
+		D & (0,0) & vertex D\\
+		\hline
+		O & (d,r) & centre O\\
+		\hline
+		C & (c+d)*e1& e1 = (1,0), direction vector\\
+		\hline
+		A & (a+d)*[(mp.cos(theta1),mp.sin(theta1)] & vertex A\\
+		\hline
+		m1 & [1, mp.tan(theta1+theta2)] & directional vector\\
+		\hline
+		B  &  A+lam[0]*m1 & lam = LA.solve(matM,C-A)\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\end{document}
