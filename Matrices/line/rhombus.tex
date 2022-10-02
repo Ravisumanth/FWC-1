@@ -32,12 +32,12 @@ Let us assume two vectors $\vec{a}$ and $\vec{b}$ for sides $BA$ and $CB$. The d
 	&\vec{(C-B)} = \vec{b}\\
 	&\vec{(C-A)} = \vec{(C-B)} +\vec{(B-A)}\\
 	&\vec{(C-A)} = \vec{b+a}\\
-	&\vec{(D-B)} = \vec{b-a}]\\
+	&\vec{(D-B)} = \vec{b-a}\\
 \end{align}
 \subsection{Mathematical Calculation:}
 Let the two diagonals be $\vec{a+b}$, $\vec{b-a}$. Since the diagonals are at right angle to each other,
 \begin{align}
-&0 = \vec{(a+b)^T}.\vec{(b-a)}\\	
+&0 = \vec{(a+b)^T}\vec{(b-a)}\\	
 &||\vec{b}||^2 - ||\vec{a}||^2 = 0\\
 &||\vec{b}|| = ||\vec{a}||\\
 \end{align}
@@ -45,13 +45,13 @@ Hence, the two sides of the quadrilateral are equal. We need to prove the third 
 Now,
 In triangle BOA and AOD;
 \begin{align}
-	&\vec{O-B} = \vec{p}\\
-	&\vec{O-D} = \vec{-p}\\
-	&\vec{O-A} = \vec{r}\\
+	&\vec{B-O} = \vec{p}\\
+	&\vec{D-O} = \vec{-p}\\
+	&\vec{A-O} = \vec{r}\\
 \end{align}
 \begin{align}
-	&\vec{a} = \vec{(O-B)} - \vec{(O-A)}\\ 
-	&\vec{d} = \vec{(O-D)} - \vec{(O-A)}\\
+	&\vec{a} = \vec{(B-O)} - \vec{(A-O)}\\ 
+	&\vec{d} = \vec{(D-O)} - \vec{(A-O)}\\
 &||\vec{a}||^2 = ||\vec{p}||^2 + ||\vec{r}||^2 - 2\vec{p^Tr}\\
 &||\vec{d}||^2 = ||\vec{-p}||^2 + ||\vec{r}||^2 + 2\vec{p^Tr}\\
 \end{align}
@@ -61,7 +61,7 @@ The terms $\vec{p^Tr}$ is equal to zero as they is perpendicular.Therefore,
 	&||\vec{d}||^2 = ||\vec{p}||^2 + ||\vec{r}||^2\\
 	&Clearly, ||\vec{a}|| = ||\vec{d}||\\
 \end{align}
-Hence, all three sides are equal and it's a rhombus.
+Hence, all three sides are equal, it's a parallelogram. A parallelogram with it's diagonals as perpendicular bisectors is a rhombus.
 \section{Construction:}
 Consider any  three vertices of the rhombus. Using the vertices, find the midpoint of the diagonals, then find the fourth point using the midpoint and remaining vertex. 
 \begin{table}[h]

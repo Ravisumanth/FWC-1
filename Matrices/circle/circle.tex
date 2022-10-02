@@ -26,43 +26,36 @@ A quadrilateral $ABCD$ is drawn to circumscribe a circle. Show that $\vec{AB+CD}
 	\caption{Circle}
 \end{figure}
 \subsection{Theory:}
-The sides of quadrilateral act as tangents to the circle. Also, the tangents at any point is at right angle to the radius of the circle. Let us assume two vectors $\vec{AP}$ and $\vec{AQ}$. The addition of these vectors is the line joining the vertex and the centre of the circle $\vec{O}$. Let us name it as $\vec{X}$.
-\begin{align*}
-&\vec{X} = \vec{AP+AQ}
-\end{align*}
+The sides of quadrilateral act as tangents to the circle. Also, the tangents at any point is at right angle to the radius of the circle. Let us assume two vectors $\vec{a}$ and $\vec{b}$.
 \subsection{Mathematical Calculation:}
-The possible tangents to the circle w.r.t vertices are $\vec{(AP,AQ,BQ,BR,CR,CS,DS,DP)}$. Let us consider the tangents $\vec{AP,AQ}$. Their addition vector is $\vec{X}$. The radius of the circle be $\vec{Y}$.
+The possible tangents to the circle w.r.t vertices are (AP,AQ,BQ,BR,CR,CS,DS,DP). Let us consider the tangents AP,AQ. Their addition vector is $\vec{X}$. The radius of the circle be $\vec{y}$.
 \begin{align*}
-&\vec{X} = \vec{AP+AQ}
-&\vec{Y} = \vec{X-AP}
+&\vec{P-A} = \vec{a}\\
+&\vec{Q-A} = \vec{b}\\
+	&\vec{O-P} = \vec{O-Q} = \vec{y}\\
 \end{align*}
 In triangle APO and AQO,  
 \begin{align*}
-&\vec{X}= \vec{Y+AP}\\
-&\vec{X}= \vec{Y+AQ}\\
-&||\vec{X}||^2 = ||\vec{Y+AP}||^2\\
-&||\vec{X}||^2 = ||\vec{Y+AQ}||^2\\
-&||\vec{X}||^2 = ||\vec{Y}||^2 +2(\vec{Y^T.AP}) +||\vec{AP}||^2\\
-&||\vec{X}||^2 = ||\vec{Y}||^2 +2(\vec{Y^T.AQ}) +||\vec{AQ}||^2\\
+	&\vec{O-A}= \vec{(O-P)+(P-A)}\\
+	&\vec{O-A}= \vec{(O-Q)+(Q-A)}\\
+&||\vec{O-A}||^2 = ||\vec{y+a}||^2\\
+	&||\vec{O-A}||^2 = ||\vec{y+b}||^2\\
+	&||\vec{O-A}||^2 = ||\vec{y}||^2 +2(\vec{y^Ta}) +||\vec{a}||^2\\
+&||\vec{O-A}||^2 = ||\vec{y}||^2 +2(\vec{y^Tb}) +||\vec{b}||^2\\
 \end{align*}
-As $\vec{(Y,AP)}$ and $\vec{(Y,AQ)}$ are perpendicular to each other, the terms $+2(\vec{Y^T.AP})$ and $+2(\vec{Y^T.AQ})$ will be equal to zero. 
+As $\vec{(y,a)}$ and $\vec{(y,b)}$ are perpendicular to each other, the terms $+2(\vec{y^Ta})$ and $+2(\vec{y^Tb})$ will be equal to zero. 
 \begin{align*}
-&||\vec{X}||^2 = ||\vec{Y}||^2 + ||\vec{AP}||^2 \\
-&||\vec{X}||^2 = ||\vec{Y}||^2 + ||\vec{AQ}||^2\\
-&||\vec{AP} = ||\vec{AQ}||
+&||\vec{O-A}||^2 = ||\vec{y}||^2 + ||\vec{a}||^2 \\
+&||\vec{O-A}||^2 = ||\vec{y}||^2 + ||\vec{b}||^2\\
+&||\vec{a} = ||\vec{b}||
 \end{align*}
 Therefore, the lengths AP is equal to AQ.\\
-Similarly, if we take the rest of the tangents as vectors and solve in the same way, we get
-\begin{align}
-	&\vec{BQ} = \vec{BR}\\
-	&\vec{CR} = \vec{CS}\\
-	&\vec{DS} = \vec{DP}
-\end{align}
+Similarly, if we take the rest of the tangents as vectors and solve in the same way, we get $BR = BQ$, $CR = CS$, $DP = DS$.
 Now, add all the above equations and we get,
-\begin{align}
+\begin{align*}
 	&\vec{(AP+BR+CR+DP)} = \vec{(AQ+BQ+CS+DS)}\\
 	&\vec{(AD+BC)} = \vec{(AB+CD)}
-\end{align}
+\end{align*}
 Hence proved.
 \section{Construction:}
 The construction of rhombus can be done using only two diagonals, taken as d1 and d2.
