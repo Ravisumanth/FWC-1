@@ -21,47 +21,49 @@
 Show that if the diagonals of a quadrilateral bisect each other at right angles, then it is a rhombus
 \maketitle
 \section{Solution:}
-\begin{figure}
+\begin{figure}[h]
 	\includegraphics[width=\linewidth]{rhombus.png}
 	\caption{Rhombus}
 \end{figure}
 \subsection{Theory:}
-Given the diagonals bisect at right angles, we need to prove that all sides are equal, using vector algebra. Let us assume two vectors $\vec{A}$ and $\vec{B}$. The diagonals are the addition and subtraction of the two vectors:
-\begin{align*}
-&(\boldsymbol{A+B}), (\boldsymbol{B-A})
-\end{align*}
+Let us assume two vectors $\vec{a}$ and $\vec{b}$ for sides $BA$ and $CB$. The diagonals $AC,BD$ are the addition and subtraction of the two vectors:
+\begin{align}
+	&\vec{(B-A)} = \vec{a}\\
+	&\vec{(C-B)} = \vec{b}\\
+	&\vec{(C-A)} = \vec{(C-B)} +\vec{(B-A)}\\
+	&\vec{(C-A)} = \vec{b+a}\\
+	&\vec{(D-B)} = \vec{b-a}]\\
+\end{align}
 \subsection{Mathematical Calculation:}
-Let the two diagonals be $\boldsymbol{X}$, $\boldsymbol{Y}$. Since the diagonals are at right angle to each other,
-\begin{align*}
-&\boldsymbol{X}= \boldsymbol{A+B}\\
-&\boldsymbol{Y}= \boldsymbol{B-A}\\
-	&cos\theta = \frac{\boldsymbol{(A+B)}.\boldsymbol{(B-A)}}{||\boldsymbol{A+B}||.||\boldsymbol{B-A}||}\\
-&cos90^{\circ} = 0 = (\boldsymbol{A+B}).(\boldsymbol{B-A})\\
-&||\boldsymbol{B}||^2 - ||\boldsymbol{A}||^2 = 0\\
-&||\boldsymbol{B}|| = ||\boldsymbol{A}||
-\end{align*}
+Let the two diagonals be $\vec{a+b}$, $\vec{b-a}$. Since the diagonals are at right angle to each other,
+\begin{align}
+&0 = \vec{(a+b)^T}.\vec{(b-a)}\\	
+&||\vec{b}||^2 - ||\vec{a}||^2 = 0\\
+&||\vec{b}|| = ||\vec{a}||\\
+\end{align}
 Hence, the two sides of the quadrilateral are equal. We need to prove the third side is also equal.
-In triangle BOA and BOC;
-\begin{align*}
-&\boldsymbol{A} = \boldsymbol{X}- \boldsymbol{Y}\\
-&\boldsymbol{D} =  \boldsymbol{-X}- \boldsymbol{Y}\\
-\end{align*}
 Now,
-\begin{align*}
-&||\boldsymbol{A}||^2 = ||\boldsymbol{X-Y}||^2\\
-&||\boldsymbol{D}||^2 = ||\boldsymbol{-X-Y}||^2\\
-&||\boldsymbol{A}||^2 = ||\boldsymbol{X}||^2 -2(\boldsymbol{X^T.Y}) +||\boldsymbol{Y}||^2\\
-&||\boldsymbol{D}||^2 = ||\boldsymbol{X}||^2 +2(\boldsymbol{X^T.Y}) +||\boldsymbol{Y}||^2\\
-\end{align*}
-As the diagonals are perpendicular to each other, the terms $+2(\boldsymbol{X^T.Y})$ and $-2(\boldsymbol{X^T.Y})$ will be equal to zero. 
-\begin{align*}
-&||\boldsymbol{A}||^2 = ||\boldsymbol{X}||^2 + ||\boldsymbol{Y}||^2 \\
-&||\boldsymbol{D}||^2 = ||\boldsymbol{X}||^2 + ||\boldsymbol{Y}||^2\\
-&||\boldsymbol{A}|| = ||\boldsymbol{D} = ||\boldsymbol{B}||
-\end{align*}
-Hence, we have proved that the given quadrilateral is a parallelogram. A parallelogram with its diagonals as perpendicular bisectors is known as Rhombus.
+In triangle BOA and AOD;
+\begin{align}
+	&\vec{O-B} = \vec{p}\\
+	&\vec{O-D} = \vec{-p}\\
+	&\vec{O-A} = \vec{r}\\
+\end{align}
+\begin{align}
+	&\vec{a} = \vec{(O-B)} - \vec{(O-A)}\\ 
+	&\vec{d} = \vec{(O-D)} - \vec{(O-A)}\\
+&||\vec{a}||^2 = ||\vec{p}||^2 + ||\vec{r}||^2 - 2\vec{p^Tr}\\
+&||\vec{d}||^2 = ||\vec{-p}||^2 + ||\vec{r}||^2 + 2\vec{p^Tr}\\
+\end{align}
+The terms $\vec{p^Tr}$ is equal to zero as they is perpendicular.Therefore,
+\begin{align}
+	&||\vec{a}||^2 = ||\vec{p}||^2 + ||\vec{r}||^2\\
+	&||\vec{d}||^2 = ||\vec{p}||^2 + ||\vec{r}||^2\\
+	&Clearly, ||\vec{a}|| = ||\vec{d}||\\
+\end{align}
+Hence, all three sides are equal and it's a rhombus.
 \section{Construction:}
-The construction of rhombus can be done using only two diagonals, taken as d1 and d2.
+Consider any  three vertices of the rhombus. Using the vertices, find the midpoint of the diagonals, then find the fourth point using the midpoint and remaining vertex. 
 \begin{table}[h]
 	\centering
 \setlength\extrarowheight{2pt}
@@ -69,17 +71,17 @@ The construction of rhombus can be done using only two diagonals, taken as d1 an
 		\hline
 		\textbf{variable} & \textbf{length/point} & \textbf{Description}\\
 		\hline
-		d1 & 8 & length of diagonal 1\\
+		A & [3,0] & Vertex A\\
 		\hline
-		d2 & 6 & length of diagonal 2\\
+		B & [4,5] & Vertex B\\
 		\hline
-		A & (d1/2,0) & point A\\
+		C & [-1,4] & Vertex C\\
 		\hline                   
-		B & (0,d2/0) & point B\\
+		D & [D-x,D-y] & Vertex D\\
 		\hline
-		C & (-d1/2,0) & point C\\
+		M & (A+B)/2 & midpoint\\
 		\hline
-		D & (0,-d2/2) & point D\\
+		(D-x,D-y) & (2*M[0]-B[0],2*M[1]-B[1]) & vertex of D\\
 		\hline
 	\end{tabular}
 \end{table}

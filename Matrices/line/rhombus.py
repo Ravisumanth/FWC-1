@@ -7,14 +7,6 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 
-def rhmbs_vertices(d1,d2):
-    A = np.array([d1/2,0])
-    B = np.array([0,d2/2])
-    C = np.array([-d1/2,0])
-    D = np.array([0,-d2/2])
-    return A,B,C,D
-
-
 def line_gen(A,B):
     len = 10
     dim = A.shape[0]
@@ -26,9 +18,18 @@ def line_gen(A,B):
     return x_AB
 
 #Rhombus can be constructed using two diagonal lengths;
-d1 = 8
-d2 = 6
-[A,B,C,D] = rhmbs_vertices(d1,d2)
+A = np.array(([3,0]))
+B = np.array(([4,5]))
+C = np.array(([-1,4]))
+#find midpoint
+M = (A+C)/2
+#coords of Fourth point
+D_x = 2*M[0]-B[0] 
+D_y = 2*M[1]-B[1]
+O = np.array(([(A+C)/2]))
+
+D = np.array(([D_x,D_y]))
+
 #line generation
 x_AB = line_gen(A,B)
 x_BC = line_gen(B,C)
@@ -45,9 +46,9 @@ plt.plot(x_CD[0,:],x_CD[1,:],label='$CD$')
 plt.plot(x_DA[0,:],x_DA[1,:],label='$DA$')
 
 
-rhm_vert = np.vstack((A,B,C,D)).T
+rhm_vert = np.vstack((A,B,C,D,O)).T
 plt.scatter(rhm_vert[0,:],rhm_vert[1,:])
-vert_labels = ['A','B','C','D']
+vert_labels = ['A','B','C','D','O']
 
 for i, txt in enumerate(vert_labels):
     plt.annotate(txt,
@@ -63,17 +64,4 @@ plt.ylabel('$y$')
 plt.grid()
 plt.axis('equal')
 plt.savefig('/sdcard/Download/Matrices/line/rhombus.png')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#plt.show()
