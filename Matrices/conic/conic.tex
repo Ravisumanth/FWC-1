@@ -1,0 +1,67 @@
+\documentclass[a4paper,12pt,twocolumn]{article}
+\usepackage{graphicx}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[cmex10]{amsmath}
+\usepackage{array}
+\usepackage{gensymb}
+\usepackage{booktabs}
+\title{Line Assignment}
+
+\author{Ravi Sumanth Muppana- FWC22003}
+\date{September 2022}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\let\vec\mathbf
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left((#1\right)}}
+\begin{document}
+\maketitle
+\section{Problem:}
+Find the equation of circle passing with radius $5$ whose center lies on x-axis and passes through point $\myvec{2,3}$.
+\maketitle
+\section{Solution:}
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{conic.png}
+\caption{Circle}
+\end{figure}
+\subsection{Theory:}
+The circle equation when it's center and radius are given is
+\begin{align}
+	&\vec{(x-a)^2} + \vec{(y-b)^2} = \vec{r^2}\\
+\end{align}
+where the centre of the circle is $\myvec{a\\b}$.
+\subsection{Mathematical Calculation:}
+Given the radius of circle is $5$. The circle passes through a point $\myvec{2\\3}$. Also, the center of circle is assumed as $\myvec{a\\0}$. Substitute $\myvec{a\\0}$ in eq.$1$ we get,
+\begin{align}
+	&\vec{(x-a)^2} + \vec{(y)^2} = \vec{25}\\
+\end{align}
+As the point $\myvec{2\\3}$ passes through the circle, substitute $\myvec{2\\3}$ in the equation, we get,
+\begin{align}
+	&\vec{(2-a)^2} + \vec{(3)^2} = \vec{25}\\
+	&\vec{4+a^2-2a} + \vec{9} = \vec{25}\\
+	&\vec{a^2-2a+13} = \vec{25}\\
+	&\vec{a^2-2a-12} = 0\\
+\end{align}
+The roots of the equation will be $(6,-2)$. Hence, the center of the circle can be $\myvec{6\\0}$ or $\myvec{-2\\0}$.
+The equation of circle will therefore be,
+\begin{align}
+	&\vec{(x-6)^2} + \vec{y^2} = 25\\
+	&\vec{(x+2)^2} + \vec{y^2} = 25
+\end{align}
+\section{Construction:}
+
+\begin{table}[h]
+        \centering
+\setlength\extrarowheight{2pt}
+        \begin{tabular}{|c|c|c|}
+                \hline
+                \textbf{variable} & \textbf{length/point} & \textbf{Description}\\
+                \hline
+		A & np.roots(coeff) & coeff = (1,-4,-12)\\
+		\hline
+		c & $(a-A[0])^2+b^2-r^2$ & Circle Eqn\\
+		\hline
+        \end{tabular}
+\end{table}
+\end{document}
