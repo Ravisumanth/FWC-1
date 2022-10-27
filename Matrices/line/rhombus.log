@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.22)  2 OCT 2022 23:32
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.14)  25 OCT 2022 06:45
+>>>>>>> f531642 (Created codes and figs folder)
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -266,11 +270,24 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 29.
 
+<<<<<<< HEAD
 Underfull \vbox (badness 1642) has occurred while \output is active []
 
 
 Overfull \hbox (29.93341pt too wide) in paragraph at lines 70--87
  [][] 
+=======
+Underfull \vbox (badness 5563) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
+\OT1/cmr/m/n/12 The terms $[]$ and
+ []
+
+
+Underfull \hbox (badness 3657) in paragraph at lines 56--58
+[]$ \OT1/cmr/m/n/12 is equal to zero as they
+>>>>>>> f531642 (Created codes and figs folder)
  []
 
 
@@ -286,6 +303,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Here is how much of TeX's memory you used:
  2743 strings out of 478287
  42284 string characters out of 5849289
+<<<<<<< HEAD
  358887 words of memory out of 5000000
  20937 multiletter control sequences out of 15000+600000
  475048 words of font info for 47 fonts, out of 8000000 for 9000
@@ -302,6 +320,25 @@ Output written on rhombus.pdf (2 pages, 98353 bytes).
 PDF statistics:
  49 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream
+=======
+ 357889 words of memory out of 5000000
+ 20937 multiletter control sequences out of 15000+600000
+ 475048 words of font info for 47 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,16n,62p,221b,263s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on rhombus.pdf (2 pages, 104419 bytes).
+PDF statistics:
+ 54 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
+>>>>>>> f531642 (Created codes and figs folder)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

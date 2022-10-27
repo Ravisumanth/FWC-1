@@ -28,6 +28,7 @@ Show that if the diagonals of a quadrilateral bisect each other at right angles,
 \subsection{Theory:}
 Let us assume two vectors $\vec{a}$ and $\vec{b}$ for sides $BA$ and $CB$. The diagonals $AC,BD$ are the addition and subtraction of the two vectors:
 \begin{align}
+<<<<<<< HEAD
 	&\vec{(B-A)} = \vec{a}\\
 	&\vec{(C-B)} = \vec{b}\\
 	&\vec{(C-A)} = \vec{(C-B)} +\vec{(B-A)}\\
@@ -40,11 +41,25 @@ Let the two diagonals be $\vec{a+b}$, $\vec{b-a}$. Since the diagonals are at ri
 &0 = \vec{(a+b)^T}\vec{(b-a)}\\	
 &||\vec{b}||^2 - ||\vec{a}||^2 = 0\\
 &||\vec{b}|| = ||\vec{a}||\\
+=======
+	&\vec{(B-A)}\\
+	&\vec{(C-B)}\\
+	&\vec{(C-A)} = \vec{(C-B)} +\vec{(B-A)}\\
+	&\vec{(D-B)} = \vec{(D-C)}+\vec{(C-B)}
+\end{align}
+\subsection{Mathematical Calculation:}
+Let the two diagonals be $\vec{(C-A)}$, $\vec{(D-B)}$. Since the diagonals are at right angle to each other,
+\begin{align}
+&0 = \vec{(C-A)^T}\vec{(D-B)}\\	
+	&||\vec{C-B}||^2 - ||\vec{(B-A)}||^2 = 0\\
+&||\vec{C-B}|| = ||\vec{B-A}||
+>>>>>>> f531642 (Created codes and figs folder)
 \end{align}
 Hence, the two sides of the quadrilateral are equal. We need to prove the third side is also equal.
 Now,
 In triangle BOA and AOD;
 \begin{align}
+<<<<<<< HEAD
 	&\vec{B-O} = \vec{p}\\
 	&\vec{D-O} = \vec{-p}\\
 	&\vec{A-O} = \vec{r}\\
@@ -62,6 +77,23 @@ The terms $\vec{p^Tr}$ is equal to zero as they is perpendicular.Therefore,
 	&Clearly, ||\vec{a}|| = ||\vec{d}||\\
 \end{align}
 Hence, all three sides are equal, it's a parallelogram. A parallelogram with it's diagonals as perpendicular bisectors is a rhombus.
+=======
+	&\vec{O-B}\\
+	&\vec{O-D}\\
+	&\vec{O-A}
+\end{align}
+\begin{align}
+	&\vec{B-A} = \vec{(O-A)} - \vec{(O-B)}\\ 
+	&\vec{D-A} = \vec{(O-A)} - \vec{(O-D)}\\
+	&||\vec{B-A}||^2 = ||\vec{O-B}||^2 + ||\vec{O-A}||^2\\ &- 2\vec{(O-B)^T(O-A)}\\
+	&||\vec{D-A}||^2 = ||\vec{O-D}||^2 + ||\vec{O-A}||^2\\ &+ 2\vec{(O-D)^T(O-A)}
+\end{align}
+The terms $\vec{(O-B)^T(O-A)}$ and $\vec{(O-D)^T(O-A)}$ is equal to zero as they are perpendicular.Therefore,
+\begin{align}
+	&Clearly, ||\vec{B-A}|| = ||\vec{D-A}||
+\end{align}
+Hence, all three sides are equal and it's a rhombus.
+>>>>>>> f531642 (Created codes and figs folder)
 \section{Construction:}
 Consider any  three vertices of the rhombus. Using the vertices, find the midpoint of the diagonals, then find the fourth point using the midpoint and remaining vertex. 
 \begin{table}[h]
@@ -71,6 +103,7 @@ Consider any  three vertices of the rhombus. Using the vertices, find the midpoi
 		\hline
 		\textbf{variable} & \textbf{length/point} & \textbf{Description}\\
 		\hline
+<<<<<<< HEAD
 		A & [3,0] & Vertex A\\
 		\hline
 		B & [4,5] & Vertex B\\
@@ -83,6 +116,24 @@ Consider any  three vertices of the rhombus. Using the vertices, find the midpoi
 		\hline
 		(D-x,D-y) & (2*M[0]-B[0],2*M[1]-B[1]) & vertex of D\\
 		\hline
+=======
+		A & \myvec{z1*e1\\0} & Vertex A\\
+		\hline
+		B & \myvec{0\\z2*e2} & Vertex B\\
+		\hline
+		C & \myvec{-z1*e1\\0} & Vertex C\\
+		\hline                   
+		D & \myvec{0\\-z2*e2} & Vertex D\\
+		\hline
+		z1,z2 & $(2,3)$ & center distance\\
+		\hline
+		e1 & np.array(([1,0])) & directional vector\\
+		\hline
+		e2 & np.array(([0,1])) & directional vector\\
+		\hline
+		M & (A+B)/2 & midpoint\\
+		\hline
+>>>>>>> f531642 (Created codes and figs folder)
 	\end{tabular}
 \end{table}
 

@@ -1,0 +1,62 @@
+\documentclass[a4paper,12pt,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[margin=0.5in]{geometry}
+\title{Assignment-1- Canonical PoS using avr-gcc}
+\author{Ravi Sumanth Muppana- FWC22003}
+\date{August 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem:}
+Derive a Canonical POS expression for a Boolean function F, represented by the following truth table:
+
+\begin{tabular}{|l|l|l|c|}
+	\hline
+	X&Y&Z&F(X,Y,Z)\\
+	\hline
+	0&0&0&1\\
+	0&0&1&0\\
+	0&1&0&1\\
+	0&1&1&0\\
+	1&0&0&1\\
+	1&0&1&1\\
+	1&1&0&0\\
+	1&1&1&0\\
+	\hline
+\end{tabular}
+
+\maketitle\section{Solution:}
+\subsection{Theory:}
+Canonical form is simply representing the Boolean function as sum of minimum terms (SoP) or product of maximum terms (PoS). For canonical PoS form, consider the input rows where the output is '0' and do logical AND of all those max terms in order to get the Boolean expression function.\\
+There are four cases where the output is '0'. They are [(0,0,1),(0,1,1),(1,1,0),(1,1,1)]. 
+\subsection{Boolean expression:}
+$F(X,Y,Z)=(X+Y+Z').(X+Y'+Z').$\\$(X'+Y'+Z).(X'+Y'+Z')$
+
+\newpage
+\subsection{Components:} 
+\begin{tabular}{|c|c|}
+	\hline
+	Components&Quantity\\
+	\hline
+	Arduino UNO & 1\\
+	Breadboard&1\\
+	Jumper wires&5\\
+	\hline
+\end{tabular}
+
+\subsection{Connections:}
+Arduino UNO has LED connected to Pin 13. Let pins 2,3,4 be the inputs. Connect the input pin to Vcc, if it must be set to '1'. Connect the input pin to GND of arduino board, if it must be set to '0'. The LED will glow if the output is '1'. 
+\section{Software:}
+Download this pdf and click on the below link for source code(C language):\\
+\href{https://raw.githubusercontent.com/Ravisumanth/FWC-1/main/avr-gcc/Canonical-PoS.c}{Source code link}\\or\\ \newline \begin{tabular}{|c|}
+\hline
+wget https://raw.githubusercontent.com/Ravisumanth\\/FWC-1/main/avr-gcc/Canonical-PoS.c
+\\ \hline
+\end{tabular}
+
+\end{document}

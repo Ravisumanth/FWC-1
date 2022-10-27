@@ -1,5 +1,9 @@
 ;program to check Canonical-PoS form of Boolean equation using Arduino
+<<<<<<< HEAD
 .include "/root/ravi/codes/m328Pdef.inc"
+=======
+.include "/sdcard/Download/m328Pdef.inc"
+>>>>>>> f531642 (Created codes and figs folder)
 .def A = r23
 .def X = r19
 .def Y = r20
@@ -67,7 +71,10 @@ mov temp1,Z
 eor temp1, mask
 or temp, temp1
 and result, temp
+<<<<<<< HEAD
 ;when more number of shifts are to be done, use loops
+=======
+>>>>>>> f531642 (Created codes and figs folder)
 lsl result
 lsl result
 lsl result
