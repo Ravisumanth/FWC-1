@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt,twocolumn]{article}
+\usepackage{graphicx}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[cmex10]{amsmath}
+\usepackage{array}
+\usepackage{gensymb}
+\usepackage{booktabs}
+\title{Optimization Advanced Assignment}
+
+\author{Ravi Sumanth Muppana- FWC22003}
+\date{September 2022}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\let\vec\mathbf
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left((#1\right)}}
+\begin{document}
+\maketitle
+\section{Problem:}
+Find the position vector of the foot of perpendicular and the perpendicular distance from the point P with position vector $2\vec{i}+3\vec{j}+4\vec{k}$ to the plane $\vec{r}.(2\vec{i}+\vec{j}+3\vec{k}-26=0)$. Also find the image of P in the plane.
+\maketitle
+\section{Solution:}
+\subsection{Theory:}
+Given the position vector of the point P as $\myvec{2\\3\\4}$. The plane eqn is:
+\begin{align}
+	&\vec{n^Tx}=c\\
+	&\vec{n} = \myvec{2\\1\\3}\\
+	&c = 26
+\end{align}
+Let O be the foot of perpendicular, PO is perpendicular to the given plane. Hence, the directional vectors will be a scalar multiple of plane's directional vectors. The line equation is given as,
+\begin{align}
+	&\vec{a}+\lambda\vec{m} = \vec{O}\\
+	&\myvec{2\\3\\4}+\lambda\myvec{2\\1\\3} = \vec{O}
+\end{align}
+\subsection{Mathematical Calculation:}
+As the point O lies on the plane, we can substitute the above coordinates in the plane equation,
+\begin{align}
+	&\myvec{2\\1\\3}^T\vec{O} = 26\\
+	&\myvec{2\\3\\4}+\lambda\myvec{2\\1\\3} = \vec{O}
+\end{align}
+The point O should be solved S.T $||\vec{O-P}||$ is minimum. Let it be V.
+\begin{align}
+	&V = \min\limits_{O,P} \hspace{0.2cm} ||\vec{O-P}||\\
+	&S.T \hspace{0.5cm} \vec{O} = \vec{P}+\lambda\myvec{2\\1\\3}\\
+	& \myvec{2\\1\\3}^T\vec{O} = 26\\
+\end{align}
+From the above equations using quadform, we get O and $||\vec{O-P}||$ as,
+\begin{align}
+	&\vec{O} = \myvec{3\\3.5\\5.5}\\
+&V = \min\limits_{O,P} \hspace{0.2cm}||\vec{O-P}|| = 1.87\\
+\end{align}
+As the Point O is the midpoint of P and its image Q,
+\begin{align}
+	&\vec{(P+Q)/2} = \vec{O}\\
+	&\vec{Q} = \vec{2O-P}\\
+	&\vec{Q} = \myvec{4\\4\\7}
+\end{align}
+\section{Conclusion:}
+Therefore, quadform is used for finding the minimum length of P to the plane(perpendicular distance) and the foot of perpendicular. O is $\myvec{3\\3.5\\5.5}$ and image of P is Q $\myvec{4\\4\\7}$ respectively.
+\end{document}
