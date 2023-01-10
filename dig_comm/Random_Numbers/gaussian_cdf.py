@@ -32,7 +32,6 @@ def gauss_pdf(x):
 
 #print(len(prob),len(x))
 plt.plot(x,prob)  #plotting the CDF
-plt.grid()      
 plt.xlabel('$x$')
 plt.ylabel('$F_X(x)$')
 plt.savefig('../figs/gauss_cdf.pdf')
@@ -44,7 +43,6 @@ plt.close()
 #plotting pdf
 plt.plot(x,pdf,'o')             # plotting PDF derived from CDF
 plt.plot(x,gauss_pdf(x))    # plotting mathematical PDF
-plt.grid() #creating the grid
 plt.xlabel('$x_i$')
 plt.ylabel('$p_X(x_i)$')
 plt.legend(["FOrmulated PDF","Theoretical PDF"])

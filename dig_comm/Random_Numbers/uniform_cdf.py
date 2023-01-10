@@ -22,7 +22,6 @@ prob = scipy.stats.uniform.cdf(x)
 
 
 plt.plot(x,prob)#plotting the CDF
-plt.grid() #creating the grid
 plt.xlabel('$x$')
 plt.ylabel('$F_X(x)$')
 plt.savefig('../figs/uniform_cdf.png')

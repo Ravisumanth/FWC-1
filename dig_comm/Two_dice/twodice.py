@@ -31,7 +31,6 @@ plt.stem(n,panal, markerfmt='o',use_line_collection=True, label='Analysis')
 plt.xlabel('$n$')
 plt.ylabel('$p_{X}(n)$')
 plt.legend()
-plt.grid()# minor
 
 #If using termux
 #plt.savefig('figs/pmf.pdf')
