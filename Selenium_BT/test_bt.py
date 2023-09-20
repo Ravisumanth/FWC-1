@@ -11,7 +11,6 @@ url = "https://www.bt.com/"
 driver.get(url)
 time.sleep(3)
 try:
-    # Wait for the Cookie pop-up to appear (if it exists) and close it
     cookie_popup = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.LINK_TEXT,"Accept all cookies")))
 
